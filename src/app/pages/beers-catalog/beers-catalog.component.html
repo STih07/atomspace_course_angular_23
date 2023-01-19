@@ -1,7 +1,7 @@
  <app-header></app-header>
 
 <div>
-  4 items (80 litres)
+  {{4 | multiplier:10 | async}} items (80 litres)
 </div>
 
 <ng-container *ngIf="beers?.length; else loadingRef">
