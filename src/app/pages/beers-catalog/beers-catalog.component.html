@@ -1,0 +1,15 @@
+ <app-header></app-header>
+
+<div>
+  4 items (80 litres)
+</div>
+
+<ng-container *ngIf="beers?.length; else loadingRef">
+  <app-beer-card [beer]="BEER" (deleteMe)="onBeerDeletion($event)" *ngFor="let BEER of beers"></app-beer-card>
+</ng-container>
+
+<ng-template #loadingRef>
+  Loading...
+</ng-template>
+
+

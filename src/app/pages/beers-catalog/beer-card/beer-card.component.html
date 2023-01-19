@@ -1,0 +1,6 @@
+<div class="beer-card" [id]="beer.id">
+  <h3>{{beer.name}}</h3>
+  <h4>{{beer.first_brewed}}</h4>
+  <img (click)="onImageClick()" src="{{beer.image_url}}" height="100">
+  <button class="purchase_btn" (click)="onAddToCartClick()">Add to cart</button>
+</div>

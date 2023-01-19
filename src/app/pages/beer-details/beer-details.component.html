@@ -1,0 +1,11 @@
+<ng-container *ngIf="details; else loadingRef">
+  <h1>{{details.name}}</h1>
+  <img src="{{details.image_url}}" height="200">
+  <h2>{{details.description}}</h2>
+</ng-container>
+
+
+
+<ng-template #loadingRef>
+  Loading...
+</ng-template>
